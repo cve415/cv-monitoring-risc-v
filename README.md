@@ -79,3 +79,6 @@ Focus: Verification and system-level tooling. Their EDA stack is essential for t
 Modern performance problems aren't in the core. RISC-V is finally making the uncore observable—and these are the companies building that future.
 
 Analysis curated for the RISC-V Monitoring & Observability Landscape Project.
+
+
+See https://github.com/cve415/risc-v-recruiting-agent
