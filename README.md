@@ -1,11 +1,5 @@
 🌐 The RISC-V Monitoring & Observability Landscape
 
-RISC-V Ecosystem Analysis · Performance Monitoring · Uncore PMU · 2025
-
-RISC-V is building the observability layer most people don't know they need—until their AI workload silently tanks.
-
-🌅 The "Uncore" Thesis
-
 Many fond memories in performance, monitoring, and observability were during my years at New Relic and AppDynamics watching developers solve issues across front-end and server code. Usually, the culprit was memory bandwidth saturation, cache thrashing, or interconnect contention happening outside the core—things that used to be difficult to see until it was too late.
 
 RISC-V's new Uncore PMU proposal (originating from the team at Alibaba, Hangzhou) tackles exactly this blind spot. It standardizes performance monitoring for last-level cache, memory controllers, coherent interconnects, and I/O subsystems—the places where modern AI, HPC, and data center workloads actually live or die.
