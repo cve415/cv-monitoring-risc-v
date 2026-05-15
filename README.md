@@ -72,3 +72,4 @@ Focus: System-level verification and EDA stack essentials.
 
 Modern performance problems aren't in the core. RISC-V is finally making the uncore observable—and these are the companies building that future.
 
+I am actively building a RISC-V Recruiting Agent: https://github.com/cve415/risc-v-recruiting-agent
