@@ -10,7 +10,6 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="RISC-V Observability Landscape: 8 Key Companies">
   <meta property="og:description" content="Exploring the leaders in RISC-V performance monitoring, from Alibaba T-Head to SiFive. Analysis of the new Uncore PMU standards.">
-  <!-- Note: You can replace this with a screenshot URL of your actual app once deployed -->
   <meta property="og:image" content="https://riscv.org/wp-content/uploads/2020/06/riscv-logo.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -131,7 +130,7 @@
       border-top: 1px solid var(--border);
     }
     .essay-content {
-      max-width: 800px;
+      max-width: 900px;
       background: #fff;
       padding: 40px;
       border-radius: 8px;
@@ -142,7 +141,7 @@
 
     .audience-cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 16px;
       margin-top: 24px;
     }
@@ -170,15 +169,16 @@
 <header>
   <div class="header-inner">
     <div class="kicker">Market Analysis</div>
-    <h1>8 Companies Shaping RISC-V Observability</h1>
+    <h1>RISC-V Observability: <em>The 8 Ecosystem Leaders</em></h1>
     <span class="author-line">By Christopher Velasco</span>
   </div>
 </header>
 
 <main>
-  <!-- COMPANY SECTION (FIRST FOR LINKEDIN) -->
+  <!-- COMPANY SECTION (TOP PRIORITY FOR LINKEDIN) -->
   <section id="companies">
     <div class="section-label">Landscape</div>
+    <h2 class="section-title">8 Companies to Watch</h2>
     <div class="company-grid" id="company-grid"></div>
   </section>
 
@@ -202,23 +202,27 @@
     </div>
   </section>
 
-  <!-- ANALYSIS SECTION (WORDING PRESERVED) -->
+  <!-- ANALYSIS SECTION -->
   <section class="analysis-container">
     <div class="section-label">Analysis</div>
     <h2 class="section-title">The Uncore PMU Proposal</h2>
     <div class="essay-content">
-      <p>Many fond experiences in performance monitoring and observability during my years at New Relic and AppDynamics watching developers solve issues across front-end and server code. Usually, the culprit was memory bandwidth saturation, cache thrashing, or interconnect contention happening outside the core—things that used to be difficult to see until it was too late.</p>
+      <p>Many <strong>fond experiences in performance monitoring and observability during my years at New Relic and AppDynamics</strong> watching developers solve issues across front-end and server code. Usually, the culprit was memory bandwidth saturation, cache thrashing, or interconnect contention happening outside the core—things that used to be difficult to see until it was too late.</p>
 
       <p>RISC-V's new <strong>Uncore PMU proposal</strong> (shoutout to Zhou Song and the team at Alibaba, Hangzhou) tackles exactly this blind spot. It standardizes performance monitoring for last-level cache, memory controllers, coherent interconnects, and I/O subsystems—the places where modern AI, HPC, and data center workloads actually live or die.</p>
       
       <div class="audience-cards">
         <div class="aud-card">
           <div class="aud-label">🔧 For Developers</div>
-          <p>Get the same uncore visibility Intel and ARM engineers already take for granted.</p>
+          <p>Get the same uncore visibility Intel and ARM engineers already take for granted. Shift from tuning the scheduler to fixing the data layout.</p>
         </div>
         <div class="aud-card">
           <div class="aud-label">🐧 For Open-Source</div>
-          <p>Shared standards integrated with Linux perf mean ecosystem cohesion.</p>
+          <p>Shared standards integrated with Linux perf mean ecosystem cohesion. RISC-V won't fragment into proprietary monitoring silos.</p>
+        </div>
+        <div class="aud-card">
+          <div class="aud-label">📈 For Business / GTM</div>
+          <p>Infrastructure table stakes for cloud adoption. When customers ask "Can you debug our bottlenecks?" this proposal gets the ecosystem to "yes."</p>
         </div>
       </div>
     </div>
@@ -232,12 +236,12 @@
 <script>
 const companies = [
   { name: "Alibaba T-Head", location: "Hangzhou, China", flag: "🇨🇳", color: "#c2521a", mx: 763, my: 112, desc: "Originators of the Zhou Song Uncore PMU proposal." },
-  { name: "proteanTecs", location: "Haifa, Israel", flag: "🇮🇱", color: "#c2521a", mx: 558, my: 118, desc: "Deep hardware telemetry for SoC health and performance." },
+  { name: "proteanTecs", location: "Haifa, Israel", flag: "🇮🇱", color: "#c2521a", mx: 558, my: 118, desc: "Deep hardware telemetry for SoC health and performance monitoring." },
   { name: "Andes Technology", location: "Hsinchu, Taiwan", flag: "🇹🇼", color: "#7a4f2a", mx: 805, my: 127, desc: "Integrating advanced tracing into high-perf RISC-V IP." },
-  { name: "Antmicro", location: "Gdańsk, Poland", flag: "🇵🇱", color: "#8c6020", mx: 495, my: 62, desc: "Software-driven hardware observability and Renode emulation." },
+  { name: "Antmicro", location: "Gdańsk, Poland", flag: "🇵🇱", color: "#8c6020", mx: 495, my: 62, desc: "Open-source hardware observability and Renode emulation." },
   { name: "SiFive", location: "San Mateo, CA, USA", flag: "🇺🇸", color: "#7a4f2a", mx: 100, my: 148, desc: "Leading RISC-V IP vendor driving monitoring standards." },
   { name: "StarFive", location: "Shanghai, China", flag: "🇨🇳", color: "#c2521a", mx: 778, my: 108, desc: "Server-grade RISC-V platforms with built-in event monitoring." },
-  { name: "Synopsys", location: "Sunnyvale, CA, USA", flag: "🇺🇸", color: "#8c6020", mx: 95, my: 155, desc: "Verification stack enabling deep-cycle visibility." },
+  { name: "Synopsys", location: "Sunnyvale, CA, USA", flag: "🇺🇸", color: "#8c6020", mx: 95, my: 155, desc: "Verification stack enabling deep-cycle visibility during design." },
   { name: "Ventana Micro", location: "Cupertino, CA, USA", flag: "🇺🇸", color: "#7a4f2a", mx: 90, my: 140, desc: "High-performance chiplets focused on uncore observability." }
 ];
 
@@ -245,7 +249,6 @@ const markersLayer = document.getElementById('markers-layer');
 const companyGrid = document.getElementById('company-grid');
 
 companies.forEach((co, index) => {
-  // SVG Markers
   const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
   const pulse = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
   pulse.setAttribute('cx', co.mx); pulse.setAttribute('cy', co.my); pulse.setAttribute('r', 5);
@@ -257,7 +260,6 @@ companies.forEach((co, index) => {
   g.appendChild(pulse); g.appendChild(dot);
   markersLayer.appendChild(g);
 
-  // Cards
   const card = document.createElement('div');
   card.className = 'co-card';
   card.innerHTML = `
