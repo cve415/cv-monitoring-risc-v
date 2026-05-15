@@ -72,16 +72,3 @@ Focus: System-level verification and EDA stack essentials.
 
 Modern performance problems aren't in the core. RISC-V is finally making the uncore observable—and these are the companies building that future.
 
-🚀 GitHub Pages Deployment Status
-
-Current Status: Resolved ✅
-
-The repository has been updated to use index.html as the primary entry point.
-
-Primary Entry: index.html is now the root file, ensuring GitHub Pages renders the custom high-fidelity design.
-
-Fallback: README.md (this file) serves as the technical documentation for developers browsing the repository directly.
-
-NoJekyll: A .nojekyll file has been added to the root to ensure standard HTML/CSS assets are served without processing.
-
-Analysis curated for the RISC-V Monitoring & Observability Landscape Project
