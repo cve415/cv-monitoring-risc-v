@@ -4,16 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- Primary Meta Tags -->
+  <!-- SEO & LinkedIn Preview Meta Tags -->
   <title>RISC-V Observability Landscape: 8 Key Companies</title>
   <meta name="description" content="A deep dive into the 8 companies shaping the future of RISC-V monitoring and the Uncore PMU proposal.">
-
-  <!-- Open Graph / LinkedIn Preview Tags -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yourusername.github.io/your-repo/">
   <meta property="og:title" content="RISC-V Observability Landscape: 8 Key Companies">
   <meta property="og:description" content="Exploring the leaders in RISC-V performance monitoring, from Alibaba T-Head to SiFive. Analysis of the new Uncore PMU standards.">
-  <meta property="og:image" content="https://raw.githubusercontent.com/riscv/riscv-logo/master/riscv-logo.png"> <!-- Fallback to RISC-V logo or your own screenshot URL -->
+  <!-- Note: You can replace this with a screenshot URL of your actual app once deployed -->
+  <meta property="og:image" content="https://riscv.org/wp-content/uploads/2020/06/riscv-logo.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -25,10 +23,8 @@
       --border: #d8cebc;
       --accent: #c2521a;
       --accent2: #9e3f10;
-      --accent3: #e07840;
       --text: #1a1008;
       --muted: #7a6a55;
-      --card: #ffffff;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -44,48 +40,38 @@
 
     /* ── HEADER ── */
     header {
-      position: relative;
-      border-bottom: 1px solid var(--border);
-      padding: 0;
       background: #fff;
+      border-bottom: 1px solid var(--border);
     }
-
     .header-inner {
       max-width: 1100px;
       margin: 0 auto;
       padding: 40px 32px;
-      position: relative;
-      z-index: 2;
     }
-
     .kicker {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 11px;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--accent);
-      margin-bottom: 12px;
+      margin-bottom: 8px;
     }
-
     h1 {
       font-family: 'Syne', sans-serif;
-      font-size: clamp(28px, 5vw, 48px);
+      font-size: clamp(28px, 5vw, 46px);
       font-weight: 800;
       line-height: 1.1;
-      color: var(--text);
-      max-width: 900px;
     }
     h1 em { font-style: italic; color: var(--accent); }
-
     .author-line {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 12px;
       color: var(--muted);
-      margin-top: 16px;
+      margin-top: 12px;
       display: block;
     }
 
-    /* ── SECTIONS ── */
+    /* ── MAIN LAYOUT ── */
     main {
       max-width: 1100px;
       margin: 0 auto;
@@ -104,49 +90,9 @@
       margin-top: 60px;
       margin-bottom: 16px;
     }
-    .section-label::before {
-      content: '';
-      width: 24px;
-      height: 1px;
-      background: var(--accent);
-    }
+    .section-label::before { content: ''; width: 24px; height: 1px; background: var(--accent); }
 
-    .section-title {
-      font-family: 'Syne', sans-serif;
-      font-size: 32px;
-      font-weight: 800;
-      margin-bottom: 24px;
-    }
-
-    /* ── MAP ── */
-    .map-wrapper {
-      position: relative;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-      background: #ede5d8;
-      height: 500px;
-      box-shadow: inset 0 0 40px rgba(0,0,0,0.02);
-    }
-    #world-map { width: 100%; height: 100%; }
-
-    .map-tooltip {
-      position: absolute;
-      background: #ffffff;
-      border: 1px solid var(--accent);
-      border-radius: 6px;
-      padding: 16px;
-      width: 260px;
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 0.2s, transform 0.2s;
-      z-index: 100;
-      box-shadow: 0 12px 40px rgba(60,30,10,0.18);
-    }
-    .map-tooltip.visible { opacity: 1; }
-    .tt-name { font-family: 'Syne', sans-serif; font-weight: 800; color: var(--accent); margin-bottom: 4px; }
-    .tt-location { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); margin-bottom: 10px; }
-    .tt-desc { font-size: 13px; color: #333; line-height: 1.5; }
+    .section-title { font-family: 'Syne', sans-serif; font-size: 32px; font-weight: 800; margin-bottom: 24px; }
 
     /* ── COMPANY LIST ── */
     .company-grid {
@@ -159,44 +105,49 @@
       border: 1px solid var(--border);
       border-radius: 8px;
       padding: 24px;
-      transition: all 0.25s ease;
-      display: flex;
-      flex-direction: column;
+      transition: transform 0.2s ease, border-color 0.2s ease;
     }
-    .co-card:hover {
-      border-color: var(--accent);
-      transform: translateY(-4px);
-      box-shadow: 0 12px 30px rgba(194,82,26,0.1);
-    }
+    .co-card:hover { border-color: var(--accent); transform: translateY(-3px); }
     .co-header { display: flex; justify-content: space-between; margin-bottom: 8px; }
     .co-name { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 18px; color: var(--text); }
     .co-location { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); margin-bottom: 12px; }
-    .co-desc { font-size: 14px; color: #444; flex-grow: 1; }
+    .co-desc { font-size: 14px; color: #444; }
 
-    /* ── ESSAY / WRITE-UP ── */
-    .essay {
-      max-width: 760px;
-      margin-top: 40px;
-      padding: 40px;
-      background: #fff;
+    /* ── MAP ── */
+    .map-wrapper {
+      position: relative;
       border: 1px solid var(--border);
-      border-radius: 8px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #ede5d8;
+      height: 480px;
     }
-    .essay p { margin-bottom: 1.6em; font-size: 17px; }
+    #world-map { width: 100%; height: 100%; }
+
+    /* ── ESSAY / ANALYSIS ── */
+    .analysis-container {
+      margin-top: 60px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+    }
+    .essay-content {
+      max-width: 800px;
+      background: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    .essay-content p { margin-bottom: 1.5em; font-size: 17px; color: #3a2c1e; }
+    .essay-content strong { color: var(--text); }
 
     .audience-cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 16px;
-      margin-top: 32px;
+      margin-top: 24px;
     }
-    .aud-card {
-      background: #faf7f2;
-      border: 1px solid var(--border);
-      padding: 20px;
-      border-radius: 6px;
-    }
-    .aud-label { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 13px; color: var(--accent); margin-bottom: 8px; text-transform: uppercase; }
+    .aud-card { background: #faf7f2; padding: 20px; border-radius: 6px; border: 1px solid var(--border); }
+    .aud-label { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 12px; color: var(--accent); margin-bottom: 8px; text-transform: uppercase; }
 
     footer {
       border-top: 1px solid var(--border);
@@ -218,23 +169,23 @@
 
 <header>
   <div class="header-inner">
-    <div class="kicker">Ecosystem Landscape</div>
-    <h1>The 8 Companies Leading <em>RISC-V</em> Observability</h1>
-    <span class="author-line">Curated by Christopher Velasco</span>
+    <div class="kicker">Market Analysis</div>
+    <h1>RISC-V Observability: <em>The 8 Ecosystem Leaders</em></h1>
+    <span class="author-line">By Christopher Velasco</span>
   </div>
 </header>
 
 <main>
-  <!-- 1. THE COMPANIES (Now First for Preview & SEO) -->
+  <!-- COMPANY SECTION (FIRST FOR LINKEDIN) -->
   <section id="companies">
-    <div class="section-label">The Leaders</div>
-    <h2 class="section-title">Ecosystem Profiles</h2>
+    <div class="section-label">Landscape</div>
+    <h2 class="section-title">8 Companies to Watch</h2>
     <div class="company-grid" id="company-grid"></div>
   </section>
 
-  <!-- 2. THE MAP -->
+  <!-- MAP SECTION -->
   <section id="map-section">
-    <div class="section-label">Global Map</div>
+    <div class="section-label">Global Presence</div>
     <h2 class="section-title">Hardware Monitoring Footprint</h2>
     <div class="map-wrapper">
       <svg id="world-map" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
@@ -249,39 +200,34 @@
         </g>
         <g id="markers-layer"></g>
       </svg>
-      <div class="map-tooltip" id="tooltip">
-        <div class="tt-name" id="tt-name"></div>
-        <div class="tt-location" id="tt-location"></div>
-        <div class="tt-desc" id="tt-desc"></div>
-      </div>
     </div>
   </section>
 
-  <!-- 3. THE ANALYSIS (Moved Down) -->
-  <section id="analysis">
-    <div class="section-label">Context & Analysis</div>
-    <h2 class="section-title">The Uncore PMU Thesis</h2>
-    <article class="essay">
-      <p>Many fond experiences in performance monitoring and observability during my years at New Relic and AppDynamics watching developers solve issues across front-end and server code. Usually, the culprit was memory bandwidth saturation, cache thrashing, or interconnect contention happening outside the core—things that used to be difficult to see until it was too late.</p>
-      
-      <p>Standardizing performance monitoring outside the core is no longer optional. For AI and HPC, the interconnect is the bottleneck. These 8 companies are ensuring that RISC-V doesn't just compete on power, but on the ability for developers to debug at scale.</p>
+  <!-- ANALYSIS SECTION (WORDING PRESERVED) -->
+  <section class="analysis-container">
+    <div class="section-label">Analysis</div>
+    <h2 class="section-title">The Uncore PMU Proposal</h2>
+    <div class="essay-content">
+      <p>Many <strong>fond experiences in performance monitoring and observability during my years at New Relic and AppDynamics</strong> watching developers solve issues across front-end and server code. Usually, the culprit was memory bandwidth saturation, cache thrashing, or interconnect contention happening outside the core—things that used to be difficult to see until it was too late.</p>
 
+      <p>RISC-V's new <strong>Uncore PMU proposal</strong> (shoutout to Zhou Song and the team at Alibaba, Hangzhou) tackles exactly this blind spot. It standardizes performance monitoring for last-level cache, memory controllers, coherent interconnects, and I/O subsystems—the places where modern AI, HPC, and data center workloads actually live or die.</p>
+      
       <div class="audience-cards">
         <div class="aud-card">
-          <div class="aud-label">Developers</div>
-          <p>Standardized uncore counters mean unified profiling tools across vendors.</p>
+          <div class="aud-label">🔧 For Developers</div>
+          <p>Get the same uncore visibility Intel and ARM engineers already take for granted.</p>
         </div>
         <div class="aud-card">
-          <div class="aud-label">Architecture</div>
-          <p>Shared hardware telemetry reduces fragmentation in the Linux ecosystem.</p>
+          <div class="aud-label">🐧 For Open-Source</div>
+          <p>Shared standards integrated with Linux perf mean ecosystem cohesion.</p>
         </div>
       </div>
-    </article>
+    </div>
   </section>
 </main>
 
 <footer>
-  <p>RISC-V Observability Landscape &nbsp;·&nbsp; Christopher Velasco &nbsp;·&nbsp; 2024</p>
+  <p>© 2024 RISC-V Observability Landscape &nbsp;·&nbsp; Christopher Velasco</p>
 </footer>
 
 <script>
@@ -292,33 +238,27 @@ const companies = [
   { name: "Antmicro", location: "Gdańsk, Poland", flag: "🇵🇱", color: "#8c6020", mx: 495, my: 62, desc: "Software-driven hardware observability and Renode emulation." },
   { name: "SiFive", location: "San Mateo, CA, USA", flag: "🇺🇸", color: "#7a4f2a", mx: 100, my: 148, desc: "Leading RISC-V IP vendor driving monitoring standards." },
   { name: "StarFive", location: "Shanghai, China", flag: "🇨🇳", color: "#c2521a", mx: 778, my: 108, desc: "Server-grade RISC-V platforms with built-in event monitoring." },
-  { name: "Synopsys", location: "Sunnyvale, CA, USA", flag: "🇺🇸", color: "#8c6020", mx: 95, my: 155, desc: "Verification stack enabling deep-cycle visibility during design." },
+  { name: "Synopsys", location: "Sunnyvale, CA, USA", flag: "🇺🇸", color: "#8c6020", mx: 95, my: 155, desc: "Verification stack enabling deep-cycle visibility." },
   { name: "Ventana Micro", location: "Cupertino, CA, USA", flag: "🇺🇸", color: "#7a4f2a", mx: 90, my: 140, desc: "High-performance chiplets focused on uncore observability." }
 ];
 
 const markersLayer = document.getElementById('markers-layer');
 const companyGrid = document.getElementById('company-grid');
-const tooltip = document.getElementById('tooltip');
-const ttName = document.getElementById('tt-name');
-const ttLoc = document.getElementById('tt-location');
-const ttDesc = document.getElementById('tt-desc');
 
 companies.forEach((co, index) => {
-  // Markers
+  // SVG Markers
   const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
   const pulse = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
   pulse.setAttribute('cx', co.mx); pulse.setAttribute('cy', co.my); pulse.setAttribute('r', 5);
   pulse.setAttribute('fill', 'none'); pulse.setAttribute('stroke', co.color); pulse.setAttribute('stroke-width', '2');
   pulse.classList.add('marker-pulse'); pulse.style.animationDelay = `${index * 0.2}s`;
-  
   const dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
   dot.setAttribute('cx', co.mx); dot.setAttribute('cy', co.my); dot.setAttribute('r', 5);
   dot.setAttribute('fill', co.color);
-  
   g.appendChild(pulse); g.appendChild(dot);
   markersLayer.appendChild(g);
 
-  // Grid
+  // Cards
   const card = document.createElement('div');
   card.className = 'co-card';
   card.innerHTML = `
@@ -330,20 +270,6 @@ companies.forEach((co, index) => {
     <div class="co-desc">${co.desc}</div>
   `;
   companyGrid.appendChild(card);
-
-  // Tooltip
-  g.addEventListener('mouseenter', (e) => {
-    ttName.textContent = co.name;
-    ttLoc.textContent = `${co.flag} ${co.location}`;
-    ttDesc.textContent = co.desc;
-    tooltip.classList.add('visible');
-  });
-  g.addEventListener('mouseleave', () => tooltip.classList.remove('visible'));
-  g.addEventListener('mousemove', (e) => {
-    const wrapper = document.querySelector('.map-wrapper').getBoundingClientRect();
-    tooltip.style.left = (e.clientX - wrapper.left + 15) + 'px';
-    tooltip.style.top = (e.clientY - wrapper.top - 15) + 'px';
-  });
 });
 </script>
 </body>
