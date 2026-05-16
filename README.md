@@ -14,8 +14,8 @@ Why this matters:
 
 ---
 
-## 🗺️ Leaders to Watch
-Eight companies across five countries shaping the RISC-V observability stack.
+## 🗺️ 8 companies (across 5 countries) shaping RISC-V observability.
+
 
 ### 🇨🇳 Alibaba (Hangzhou, China)
 * **Category:** Uncore PMU / Observability
