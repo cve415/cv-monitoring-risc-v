@@ -13,7 +13,6 @@ Why this matters:
 | **📈 For Business / GTM** | This is infrastructure table stakes for cloud adoption. When customers ask, "Can you debug our bottlenecks?" this proposal gets the ecosystem to "yes." |
 
 ---
-
 ## 🗺️ 8 companies (across 5 countries) shaping RISC-V observability.
 
 
