@@ -13,7 +13,7 @@ Why this matters:
 | **📈 For Business / GTM** | This is infrastructure table stakes for cloud adoption. When customers ask, "Can you debug our bottlenecks?" this proposal gets the ecosystem to "yes." |
 
 ---
-## 🗺️ 8 companies (across 5 countries) shaping RISC-V observability.
+## 🗺️ 10 companies (across 5 countries) shaping RISC-V observability.
 
 
 ### 🇨🇳 Alibaba (Hangzhou, China)
@@ -43,6 +43,15 @@ Why this matters:
 ### 🇺🇸 Synopsys (Sunnyvale, CA, USA)
 * **Category:** Tooling / Integration
 * **Focus:** System-level verification and EDA stack essentials.
+
+🇺🇸 Breker Verification Systems (San Jose, CA, USA)
+Category: Tooling / Integration
+Focus: Cache coherency verification and system-level pre-silicon validation.
+
+🇺🇸 Akeana (San Jose, CA, USA)
+Category: Uncore PMU / Observability
+
+  
 
 ---
 
