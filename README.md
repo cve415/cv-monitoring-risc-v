@@ -49,9 +49,7 @@ Focus: Cache coherency verification and system-level pre-silicon validation.
 
 🇺🇸 Akeana (San Jose, CA, USA)
 Category: Uncore PMU / Observability
-
-  
-
+ 
 ---
 
 ## 🏁 Summary
