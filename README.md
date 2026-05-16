@@ -4,7 +4,6 @@ Many fond memories of performance monitoring and observability innovation from m
 
 RISC-V's new Uncore PMU proposal (originating from the team at Alibaba, Hangzhou) tackles exactly this blind spot. It standardizes performance monitoring for last-level cache, memory controllers, coherent interconnects, and I/O subsystems—the places where modern AI, HPC, and data center workloads actually live or die.
 
-Why this matters:
 
 | Audience | The Value Proposition |
 | :--- | :--- |
