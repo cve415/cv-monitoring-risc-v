@@ -44,11 +44,11 @@ RISC-V's new Uncore PMU proposal (originating from the team at Alibaba, Hangzhou
 * **Focus:** System-level verification and EDA stack essentials.
 
 🇺🇸 Breker Verification Systems (San Jose, CA, USA)
-Category: Tooling / Integration
-Focus: Cache coherency verification and system-level pre-silicon validation.
+* **Category:**  Tooling / Integration
+* **Focus:** Cache coherency verification and system-level pre-silicon validation.
 
 🇺🇸 Akeana (San Jose, CA, USA)
-Category: Uncore PMU / Observability
+* **Category:** Uncore PMU / Observability
  
 ---
 
