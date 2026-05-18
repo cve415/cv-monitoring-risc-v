@@ -12,7 +12,7 @@ RISC-V's new Uncore PMU proposal (originating from the team at Alibaba, Hangzhou
 | **📈 For Business / GTM** | This is infrastructure table stakes for cloud adoption. When customers ask, "Can you debug our bottlenecks?" this proposal gets the ecosystem to "yes." |
 
 ---
-## 🗺️ 10 companies (across 5 countries) shaping RISC-V observability.
+## 10 companies (across 5 countries) shaping RISC-V observability.
 
 
 ### 🇨🇳 Alibaba (Hangzhou, China)
@@ -52,7 +52,7 @@ RISC-V's new Uncore PMU proposal (originating from the team at Alibaba, Hangzhou
  
 ---
 
-## 🏁 Summary
+## Summary
 Modern performance problems aren't in the core. RISC-V is finally making the uncore observable—and these are the companies building that future.
 
 I am actively building a RISC-V Recruiting Agent: https://github.com/cve415/risc-v-recruiting-agent
